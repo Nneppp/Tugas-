@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int i;
+int jr; // jumlah resistor
+int nr; // nilai resistor
+float np; // nilai paralel
+float npp; // nilai np setelah di bagi 1
+
+void main() {
+
+    printf("jumlah resistor : ");
+    scanf("%d", &jr);
+
+        for (i = 1; i <= jr; i++) {
+            printf("nilai resistor %d : ", i);
+            scanf("%d", &nr);
+
+            np += 1.0 / nr; // nilai awal
+            npp = 1.0 / np; // nilai akhir setelah 1 di bagi np
+
+        }
+        printf("\nnilai resistor pada rangkaian paralel adalah : %f atau %.2f ohm \n\n", np, npp);
+
+} 
