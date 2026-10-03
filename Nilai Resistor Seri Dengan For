@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// for loop = untuk memberi batasan sesuai dengan batas angka yang di minta
+
+int i; // nilai awal
+int jr; // jumlah resistor 
+int nr; // nilai resistor
+int ns; // nilai rangkaian seri
+
+void main() {
+
+        printf("jumlah resistor : ");
+        scanf("%d", &jr);
+
+        for (i = 1; i <= jr; i++) {
+            printf("nilai resistor %d : ", i);
+            scanf("%d", &nr);
+
+            ns += nr; // nilai rangkaian seri
+        } 
+
+        printf("\nnilai resistor pada rangkaian seri adalah : %d ohm \n\n", ns);
+
+}
