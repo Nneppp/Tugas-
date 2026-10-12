@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int i;
+int rp; 
+int nrp;
+float hasil_paralel;
+float np_total; // rp setelah 1 / R
+
+int rs;
+int nrs;
+int hasil_seri;
+// int ns_seri;
+
+int v; // tegangan
+float i_total; // ampere
+float mA_total; // mili ampere
+float V_rp; // tegangan pada resistor paralel
+
+float total_rangkaian;
+
+
+
+void main() {
+    
+    // memasukkan nilai tegangan 
+    printf("masukkan nilai tegangan : ");
+    scanf("%d", &v);
+
+    // rumus rangkaian paralel
+    printf("\nmasukkan jumlah resistor paralel : ");
+    scanf("%d", &rp);
+
+for (i = 1; i <= rp; i++) {
+
+    printf("masukkan nilai resistor paralel %d : ", i);
+    scanf("%d", &nrp);
+
+    hasil_paralel += 1.0 / nrp;
+    np_total = 1.0 / hasil_paralel;
+}
+
+printf("nilai resistor pada rangkaian paralel adalah : %f atau %.2f ohm\n", hasil_paralel, np_total);
+
+    // rumus rangkaian seri 
+    printf("\n\nmasukkan jumlah resistor seri : ");
+    scanf("%d", &rs);
+
+for (i = 1; i <= rs; i++) {
+
+    printf("masukkan nilai resistor seri %d : ", i);
+    scanf("%d", &nrs);
+    
+    hasil_seri += nrs;
+}
+printf("nilai resistor pada rangkaian seri adalah : %d ohm\n\n\n", hasil_seri);
+
+
+total_rangkaian = np_total + hasil_seri;
+i_total = v / total_rangkaian;
+mA_total = i_total * 1000;
+
+V_rp = i_total * np_total; 
+
+// nilai resistor dan arus total  
+
+printf("nilai hambatan total pada rangkaian campuran adalah : %.2f ohm \n", total_rangkaian);
+printf("nilai arus total pada rangkaian campuran adalah : %f Ampere atau %.2f mA\n\n", i_total, mA_total);
+printf("sesuai dengan hukum ohm yaitu Vrp = Vr2, maka Vr2 nya adalah %.2f V\n\n", V_rp);
+
+
+
+}
