@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int i; // nilai awal
+int angka; 
+int hasil = 1;
+float hasilF;
+
+void main() {
+
+printf("\nmasukkan angka faktorial : ", angka);
+scanf("%d", &angka);
+
+for ( i = 1; i <= angka; i++) {
+
+    // printf("%d x ", i);
+    
+    if ( i < angka ) {
+        printf("%d x ", i);
+    } else {
+        printf("%d ", i);
+    }
+
+    hasil *= i;
+
+}
+
+    printf("\nhasil dari %d! adalah %d\n", angka,  hasil);
+
+    hasilF = ( hasil * hasil * hasil * hasil + 3 * hasil * hasil * hasil + 2 * hasil + 1 )/5;
+
+    printf("\nhasil dari %d! yang di fungsikan adalah %.2f\n\n", angka,  hasilF);
+
+
+
+}
+
+
+
+
+
+
