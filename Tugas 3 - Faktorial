@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int i; // nilai awal
+int angka; 
+int hasil = 1;
+
+void main() {
+
+printf("\nmasukkan angka faktorial : ", angka);
+scanf("%d", &angka);
+
+for ( i = 1; i <= angka; i++) {
+
+    if ( i < angka ) {
+        printf("%d x ", i);
+    } 
+
+    else {
+        printf("%d ", i);
+    }
+
+    hasil *= i;
+
+    
+}
+
+    printf("\nhasil dari %d! adalah %d\n\n", angka,  hasil);
+}
+
+
+
+
